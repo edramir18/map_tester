@@ -22,10 +22,11 @@ int		check_map(char map[ROWS][COLUMNS + 1], int row, int col)
 	char	c;
 	int		ok;
 
-	c = map[row][col];
+	
 	if (row < 0 || col < 0 || row >= ROWS || col >= COLUMNS)
 		return (1);
-	else if (c == ' ')
+	c = map[row][col];
+	if (c == ' ')
 		return (1);
 	else if (c == '3' || c == '1')
 		return (0);
